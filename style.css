@@ -179,6 +179,10 @@ padding: 64px;
     height: 100%;
 }
 
+.social_container i{
+    padding-right: 0.5%;
+}
+
 /* Página Produtos 2 */
 
 .img_produto_container {
@@ -246,9 +250,9 @@ button{
 
 /* Página Login 3 */
 
-.login, .registrar{
+.login {
     background-color: rgb(230, 230, 230);
-    height: 400PX;
+    height: 400px;
 }
 
 .login_container,.registrar_container {
@@ -317,9 +321,12 @@ button{
 
 
 /* Registar */
+
 .registrar_container{
     width: 500px;
-    margin: auto;
+    margin: 5% 40%;
+   
+    
     
 }
 .registrar_container h1 {
@@ -327,7 +334,6 @@ button{
 }
 
 #registrar_form {
-
     display: flex;
     flex-direction:column;
     width: 100%;
