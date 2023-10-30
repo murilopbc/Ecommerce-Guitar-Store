@@ -14,6 +14,23 @@ grid.innerHTML += html
 }
 
 
+export function handleClick(){
+    let produtos = document.querySelectorAll("div.product_card")
+    console.log(produtos)
+   
+    produtos.forEach(produto => produto.addEventListener('click', (evento) => {
+        let idProduto = evento.target.id
+        localStorage.setItem('prodID', idProduto)
+        console.log(idProduto)
+    }
+    ))}
+
+export function findProduct(produtos, prodID) {
+    let produto = produtos.find(prod => prod.codigoProduto == prodID)
+    console.log(produto)
+    return produto
+}
+
 
 //for (let i = 0; i < catalogo.length; i++ ) {
     //let produto =  `<div class="produtos">
