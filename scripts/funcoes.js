@@ -2,10 +2,12 @@
  
  export function carregarProduto(listaProdutos,grid){
     listaProdutos.forEach(produto => {
-        let html = `<div class="produtos">
-        <a href="produto1.html">
-           <img class="produto_imagem" src="${produto.imagemProduto}">
-        </a>
+        let html = `<div class="produtos" id="${produto.codigoProduto}">
+       <a href="produto1.html">
+       <img class="produto_imagem" src="${produto.imagemProduto}" id="${produto.codigoProduto}">
+       </a>
+           
+       
     </div>`
 
 grid.innerHTML += html
@@ -15,7 +17,7 @@ grid.innerHTML += html
 
 
 export function handleClick(){
-    let produtos = document.querySelectorAll("div.product_card")
+    let produtos = document.querySelectorAll("div.produtos")
     console.log(produtos)
    
     produtos.forEach(produto => produto.addEventListener('click', (evento) => {
