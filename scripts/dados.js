@@ -7,7 +7,7 @@
     precoProduto: 2410.00,
     imagemProduto: "./imagem/produtos/produto 1.png",
     categoria : "aco"
-
+    
 },
 
 {
@@ -56,15 +56,3 @@
 }
 
 ]
-
-
-//const gridProduto = document.querySelector(".produto_grid")
-//console.log(gridProduto.innerHTML)
-
-//for(let i = 0; i < catalogo.length; i++ ) {
-    //let produto =  `<div class="produtos">
-                        //<a href="produto${i + 1}.html">
-                           //<img class="produto_imagem" src="${catalogo[i].imagemProduto}">
-                        //</a>
-                    //</div>`
-//}

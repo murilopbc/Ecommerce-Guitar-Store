@@ -1,20 +1,18 @@
  /// Função recebe dois parâmetros: Recebe uma lista de produtos, e o local onde o html
  
- export function carregarProduto(listaProdutos,grid){
+ export function carregarProduto(listaProdutos, localHTML){
     listaProdutos.forEach(produto => {
         let html = `<div class="produtos" id="${produto.codigoProduto}">
-       <a href="produto1.html">
-       <img class="produto_imagem" src="${produto.imagemProduto}" id="${produto.codigoProduto}">
-       </a>
-           
-       
-    </div>`
+                        <a href="produto1.html">
+                        <img class="produto_imagem" src="${produto.imagemProduto}" id="${produto.codigoProduto}">
+                        </a>
 
-grid.innerHTML += html
+                    </div>`
+
+        localHTML.innerHTML += html
 
     });
 }
-
 
 export function handleClick(){
     let produtos = document.querySelectorAll("div.produtos")
@@ -25,21 +23,36 @@ export function handleClick(){
         localStorage.setItem('prodID', idProduto)
         console.log(idProduto)
     }
-    ))}
+      ))}
 
 export function findProduct(produtos, prodID) {
     let produto = produtos.find(prod => prod.codigoProduto == prodID)
-    console.log(produto)
     return produto
+    }
+
+export function carregaProduto(item){
+        const gridProduto = document.querySelector(".produtos_container")
+        let html = 
+        `<div class="produtos_info_imagem">
+        <img src="${item.imagemProduto}" alt="Violão Takamine">
+        </div>
+        <div class="produto_info">
+        <h2>${item.nomeProduto}</h2>
+        <span>R$ ${item.precoProduto}</span>
+        <input type="number" name="" id="comprar" value="1">
+        <button>Comprar</button>
+        <p>${item.descricaoProduto}</p>
+        </div>`
+    gridProduto.innerHTML = html
+    }
+
+export function addItemCarrinho (item, carrinhoCompras) {
+    let botaoComprar = document.querySelector('button')
+    botaoComprar.addEventListener('click', () => {
+        let quantidade = parseInt(document.querySelector('input#comprar').value)
+        let newItem = {...item,quantidade}
+        carrinhoCompras.push(newItem)
+        localStorage.setItem('carrinho', JSON.stringify(carrinhoCompras))
+       
+})
 }
-
-
-//for (let i = 0; i < catalogo.length; i++ ) {
-    //let produto =  `<div class="produtos">
-                        //<a href="produto${i + 1}.html">
-                           //<img class="produto_imagem" src="${catalogo[i].imagemProduto}">
-                        //</a>
-                   // </div>`
-
-//gridProduto.innerHTML += produto
-//}

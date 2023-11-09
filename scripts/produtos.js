@@ -1,7 +1,7 @@
 import { catalogo } from "./dados.js";
 import { carregarProduto, handleClick } from "./funcoes.js";
 
-const gridProduto = document.querySelector(".produto_grid")
+const catalogoProdutos = document.querySelector(".produto_grid")
 
-carregarProduto(catalogo, gridProduto)
+carregarProduto(catalogo, catalogoProdutos)
 handleClick()
