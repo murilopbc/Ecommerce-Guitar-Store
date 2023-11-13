@@ -31,27 +31,32 @@ export function findProduct(produtos, prodID) {
     }
 
 export function carregaProduto(item){
-        const gridProduto = document.querySelector(".produtos_container")
-        let html = 
-        `<div class="produtos_info_imagem">
-        <img src="${item.imagemProduto}" alt="Violão Takamine">
-        </div>
-        <div class="produto_info">
-        <h2>${item.nomeProduto}</h2>
-        <span>R$ ${item.precoProduto}</span>
-        <input type="number" name="" id="comprar" value="1">
-        <button>Comprar</button>
-        <p>${item.descricaoProduto}</p>
-        </div>`
+        const gridProduto = document.querySelector("section.produtos_container")
+        let html =  `<div class="img_produto_container">
+<div class="produtos_info_imagem">
+    <img src="${item.imagemProduto}" alt="Violão Takamine">
+</div>
+<div class="produto_info">
+    <h2>${item.nomeProduto}</h2>
+    <span>R$${item.precoProduto}</span>
+    <input type="number" name="" id="qtd" value="1">
+    <button>Comprar</button>
+    <p>${item.descricaoProduto}
+    </p>
+</div>
+</div>`
+       
     gridProduto.innerHTML = html
     }
 
 export function addItemCarrinho (item, carrinhoCompras) {
     let botaoComprar = document.querySelector('button')
+  
     botaoComprar.addEventListener('click', () => {
-        let quantidade = parseInt(document.querySelector('input#comprar').value)
+        let quantidade = parseInt(document.querySelector('input#qtd').value)
         let newItem = {...item,quantidade}
         carrinhoCompras.push(newItem)
+        console.log(carrinhoCompras)
         localStorage.setItem('carrinho', JSON.stringify(carrinhoCompras))
        
 })
