@@ -6,7 +6,6 @@
                         <a href="produto1.html">
                         <img class="produto_imagem" src="${produto.imagemProduto}" id="${produto.codigoProduto}">
                         </a>
-
                     </div>`
 
         localHTML.innerHTML += html
@@ -39,7 +38,7 @@ export function carregaProduto(item){
 <div class="produto_info">
     <h2>${item.nomeProduto}</h2>
     <span>R$${item.precoProduto}</span>
-    <input type="number" name="" id="qtd" value="1">
+    <input type="number" min="1" name="" id="qtd" value="1">
     <button>Comprar</button>
     <p>${item.descricaoProduto}
     </p>
