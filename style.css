@@ -528,23 +528,23 @@ button{
     }    
 }
 
-/* ENDEREÇO DE ENTREGA */
+/* PÁGINA ENDEREÇO DE ENTREGA */
 
 .endereco_container {
-    margin: 0 auto;
+    margin-top: 10%;
     width: 800px;
     display:flex;
     flex-direction: column;
     justify-content:center;    
 } 
-
-.endereco_container h2 {
-    margin-top: 10%;
+.endereco_container h2{
+    margin-left: 50%;
 }
+
 
 .endereco_container form {
     padding: 40px;
-    margin: 0 auto;
+    margin-left: 70%;
     width: 800px;
     display:flex;
     flex-direction: column;
