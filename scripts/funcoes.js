@@ -6,6 +6,9 @@
                         <a href="produto1.html">
                         <img class="produto_imagem" src="${produto.imagemProduto}" id="${produto.codigoProduto}">
                         </a>
+                        <h4>${produto.nomeProduto}</h4>
+                        <h4 class="precoProduto" >R$${produto.precoProduto.toFixed(2).replace(".", ",")}</h4>
+                        
                     </div>`
 
         localHTML.innerHTML += html
@@ -37,7 +40,7 @@ export function carregaProduto(item){
 </div>
 <div class="produto_info">
     <h2>${item.nomeProduto}</h2>
-    <span>R$${item.precoProduto}</span>
+    <h2>R$${item.precoProduto.toFixed(2).replace(".", ",")}</h2>
     <input type="number" min="1" name="" id="qtd" value="1">
     <button>Comprar</button>
     <p>${item.descricaoProduto}
@@ -60,15 +63,3 @@ export function addItemCarrinho (item, carrinhoCompras) {
        
 })
 }
- export function ValorTotal(){
-    let total = 0
-    const produto_card = document.getElementsByClassName("right-bar")
-    for(var i = 0; i <produto_card.length; i++){
-      console.log(produto_card[i])
-      const preco = produto_card[i].getElementsByClassName("preco")[0].innerText.replace("R$", "").replace(",", ".").replace(" ", "")
-      const quantidade_pdt = produto_card[i].getElementsByClassName("product-qtd-input")[0].value
-      console.log(quantidade_pdt)
-      total = total+(preco*quantidade_pdt)
-    }
-    console.log(total)
-  }

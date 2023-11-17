@@ -21,7 +21,7 @@
 
 {
     codigoProduto: 3,
-    nomeProduto: "Violão Martin Eletroacústico Aço 000-X2E Captador Fishman Mx com Capa",
+    nomeProduto: "Violão Martin Eletroacústico Aço 000-X2E Captador Fishman Mx",
     descricaoProduto:"A Martin recriou o 000X1AE como o 000-X2E, um violão de Auditório com topo de Sitka e laminado de alta pressão de mogno figurativo. Apresenta incrustações de madrepérola na escala, escala e ponte de HardWood, melhorando significativamente a ressonância. Equipado com eletrônica Fishman® MX e cordas Authentic Acoustic Lifespan® 2.0 da Martin's, este modelo inclui uma bag resistente à água, sendo ideal para viagens.",
     precoProduto: 7640.10,
     imagemProduto: "./imagem/produtos/produto3.webp",
@@ -73,7 +73,7 @@
 },
 {
     codigoProduto: 9,
-    nomeProduto: "Violão Acústico CD-60S Dreadnought All-Mahogany - Fender",
+    nomeProduto: "Violão Acústico CD-60S Folk All-Mahogany - Fender",
     descricaoProduto:"O CD-60S All-Mahogany combina um tampo de mogno sólido com o popular modelo dreadnought da Fender, oferecendo um tom orgânico e alta qualidade acessível. Com um braço fácil de tocar e corpo em mogno, é ideal para jogadores que buscam excelente jogabilidade e som clássico em diversas situações, seja no sofá, na praia ou na cafeteria.",
     precoProduto: 1746.16,
     imagemProduto: "./imagem/produtos/produto9.webp",
