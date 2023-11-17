@@ -1,4 +1,5 @@
- /// Função recebe dois parâmetros: Recebe uma lista de produtos, e o local onde o html
+ 
+ // FUNÇÃO CARREGA OS PRODUTOS AUTOMATICAMENTE NA PÁGINA 'HOME' E 'PRODUTOS'
  
  export function carregarProduto(listaProdutos, localHTML){
     listaProdutos.forEach(produto => {
@@ -16,6 +17,8 @@
     });
 }
 
+// FUNÇÃO ADICIONA UM EVENTO DE 'CLICK' A CADA ELEMENTO DA CLASSE 'PRODUTOS', ARMAZENANDO O ID DO PRODUTO CLICADO NO LOCALSTORAGE
+
 export function handleClick(){
     let produtos = document.querySelectorAll("div.produtos")
     console.log(produtos)
@@ -27,10 +30,14 @@ export function handleClick(){
     }
       ))}
 
+// FUNÇÃO RECEBE UMA LISTA DE PRODUTOS E UM ID DE PRODUTO, RETORNANDO O PRODUTO CORRESPONDENTE AO SEU CÓDIGO
+
 export function findProduct(produtos, prodID) {
     let produto = produtos.find(prod => prod.codigoProduto == prodID)
     return produto
     }
+
+// FUNÇÃO CARREGA OS PRODUTOS AUTOMATICAMENTE NA PÁGINA INDIVIDUAL DE CADA PRODUTO
 
 export function carregaProduto(item){
         const gridProduto = document.querySelector("section.produtos_container")
@@ -40,7 +47,7 @@ export function carregaProduto(item){
 </div>
 <div class="produto_info">
     <h2>${item.nomeProduto}</h2>
-    <h2>R$${item.precoProduto.toFixed(2).replace(".", ",")}</h2>
+    <h3>R$${item.precoProduto.toFixed(2).replace(".", ",")}</h3>
     <input type="number" min="1" name="" id="qtd" value="1">
     <button>Comprar</button>
     <p>${item.descricaoProduto}
@@ -50,6 +57,8 @@ export function carregaProduto(item){
        
     gridProduto.innerHTML = html
     }
+
+// FUNÇÃO ADICIONAR PRODUTO NO CARRINHO DE ACORDO COM O 'CLICK' E A 'QUANTIDADE'
 
 export function addItemCarrinho (item, carrinhoCompras) {
     let botaoComprar = document.querySelector('button')

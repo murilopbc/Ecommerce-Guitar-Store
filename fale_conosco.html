@@ -9,6 +9,9 @@
 </head>
 
 <body>
+
+      <!-- HEADER: LOGO, MENU, ÍCONES -->
+
     <header id="header_container">
         <div class="logo_container">
             <img class="logo" src="imagem/produtos/logo_guitarstore.png" alt="logomarca">
@@ -54,31 +57,29 @@
             </div>
         </div>
     </header>
+
+    <!-- FORMULÁRIO FALE CONOSCO -->
     <main>
-
-
-        <section class="fale_conosco_container">
-
+            <div class="fale_conosco_container">
                 <h2>Fale conosco</h2>
-
-            <form action="fale_conosco.html" id="fale_conosco_container">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required>
-
-                <label for="assunto">Assunto:</label>
-                <input type="text" id="assunto" name="assunto" required>
-
-                <label for="mensagem">Mensagem:</label>
-                <textarea name="mensagem" id="mensagem" id cols="30" rows="10" placeholder="Digite sua mensagem:" required></textarea>
-                <button>Enviar</button>
-            </form>
-        </section>
+                <form action="fale_conosco.html" id="fale_conosco">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+    
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" name="assunto" required>
+    
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea name="mensagem" id="mensagem" id cols="30" rows="10" placeholder="Digite sua mensagem:" required></textarea>
+                    <button>Enviar</button>
+                </form>
+            </div> 
     </main>
 
 </body>

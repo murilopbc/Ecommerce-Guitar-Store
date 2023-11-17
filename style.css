@@ -1,4 +1,4 @@
-/* Página Home 1 */
+/* PÁGINA HOME */
 
 *{
     margin: 0;
@@ -153,6 +153,7 @@ padding: 64px;
     height: auto;
     display: flex;
 }
+
 .img_propaganda_container{
     display: flex;
     align-items: center;
@@ -163,7 +164,6 @@ padding: 64px;
     margin-left: 3%;
     font-size: 35px;
 }
-
 
 /* RODAPÉ */
 
@@ -182,26 +182,25 @@ padding: 64px;
 }
 
 .social_container {
-    padding: 3%;
+    padding: 2%;
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 50%;
+    height: 15%;
 }
 
 .social_container i{
     padding-right: 0.5%;
 }
 
-/* Página Produtos 2 */
+/* PÁGINA PRODUTOS */
 
 .img_produto_container {
     padding: 60px 72px;
     display: flex;
     max-width: 1440px;
     justify-content:center;
-    column-gap: 40px;
-   
+    column-gap: 40px;   
 }
 
 .produtos_info_imagem, .produto_info {
@@ -216,25 +215,26 @@ padding: 64px;
     border-radius: 5px;
 }
 
-
-.produto_info h2 {
+.produto_info h2, .produto_info h3 {
     display:block;
     font-size: 24px;
-    padding-bottom: 20px;
+    padding-bottom: 20px;   
+}
+.produto_info h3{
+    color: #2fa222;
 }
 
-.
 
 .produto_info input, .cart_item_container input {
     width: 70px;
     font-size: 20px;
     padding: 10px 20px;
     border-radius: 30px;
-    /* text-align: center; */
     padding-left: 10px;
     margin-bottom: 50px;
     margin-right:20px;
 }
+
 button{
     cursor: pointer;
 }
@@ -246,16 +246,14 @@ button{
     text-transform: uppercase;
     color:#fff;
     background-color: black;
-
 }
 
 .produto_info p {
     font-size:20px;
     line-height: 24px;
-
 }
 
-/* Página Login 3 */
+/* PÁGINA LOGIN */
 
 .login {
     background-color: rgb(230, 230, 230);
@@ -279,7 +277,6 @@ button{
     text-align: center;
     padding-bottom: 5%;
 }
-
 
 #login_form {
     margin-bottom: 20px;
@@ -315,27 +312,25 @@ button{
     cursor: pointer;
     margin-top: 20px;
     font-size: 15px;
-    width: 100%;
-    
+    width: 100%;    
 }
+
 #forgot_pass {
     text-align: center;
     margin-bottom: 5%;
 }
+
 #conta {
     text-align: center;
 }
 
-
-/* Registar */
+/* PÁGINA REGISTRAR */
 
 .registrar_container{
     width: 500px;
-    margin: 5% 40%;
-   
-    
-    
+    margin: 5% 40%;    
 }
+
 .registrar_container h1 {
     font-size: 35px;
 }
@@ -347,19 +342,20 @@ button{
     height: 730px;
     font-size: 20px;  
 }
+
 #registrar_form label{
     margin-bottom: 4%;
     margin-top: 4%;
     font-size: 17px;
 }
+
 .gender-options {
     display: flex;
     align-items: center;
     margin-left: 10%;
     margin-right: 10%;
     padding-left: 15%;
-    padding-right: 15%;
-    
+    padding-right: 15%;   
 }
 
 .gender-options label {
@@ -367,28 +363,30 @@ button{
 }
 
 .gender-options input {
-    margin: -2%;
-    
+    margin: -2%;   
 }
 
-/* Página Carrinho de Compra*/
+/* PÁGINA CARRINHO DE COMPRA */
 
 .wraper{
     max-width: 1000px;
     margin: 0 auto;
-
 }
+
 .wraper h1{
     padding: 30px 0;
     text-align: center;
     margin-top:-5% ;
 }
+
 .project {
     display: flex;
 }
+
 .shop{
     flex: 75%;
 }
+
 .box {
     display: flex;
     width: 100%;
@@ -400,14 +398,17 @@ button{
     box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
     border-radius: 10px;
 }
+
 .box:hover{
     transform: scale(1.02s);
 }
+
 .box img{
     width: 300px;
     height: 200px;
     object-fit: cover;
 }
+
 .content{
     padding: 20px;
     width: 100%;
@@ -416,6 +417,7 @@ button{
 .content h3{
     margin-bottom: 20px;
 }
+
 .content h4{
     margin-bottom: 20px;
     font-size: 17px;
@@ -432,10 +434,12 @@ button{
     border-radius: 10px;
     font-weight: 600;
 }
+
 .btn_area:hover{
     background-color: #76bfb6;
     color: #fff;
 }
+
 .unit input{
     width: 50px;
     margin-bottom: 10px;
@@ -443,15 +447,18 @@ button{
     text-align: center;
     border-radius: 10px;
 }
+
 .btn2{
     background-color: rgb(192, 7, 7);
     color: white;
     border-radius: 10px;
     padding: 4px;
 }
+
 .btn_area i{
     margin-right: 5px;
 }
+
 .right-bar{
     width: 30%;
     margin-left: 20px;
@@ -468,6 +475,7 @@ button{
     margin-bottom: 20px;
     font-size: 20px;
 }
+
 .right-bar a{
     margin-top: 30px;
     background-color: rgb(23, 161, 23);
@@ -479,7 +487,6 @@ button{
     height: 40px;
     line-height: 40px;
     font-weight: 900;
-
 }
 
 .right-bar a  :hover{
@@ -504,6 +511,7 @@ button{
         width: 200px;
     }  
 }
+
 @media screen and (max-width: 900px) {
     .project{
         flex-direction: column;
@@ -513,13 +521,14 @@ button{
         margin-bottom: 20px;
     }   
 }
+
 @media screen and (max-width: 1250px) {
     .wraper{
         max-width: 95%;
     }    
 }
 
-/* Endereço de Entrega*/
+/* ENDEREÇO DE ENTREGA */
 
 .endereco_container {
     margin: 0 auto;
@@ -554,51 +563,44 @@ button{
     font-size: 20px;
 }
 
-/* Página Fale conosco 6 */
+/* PÁGINA FALE CONOSCO */
 
-.fale_conosco_container{
-    padding: 100px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 35%;
-
-}
 .fale_conosco_container h2{
-    justify-content: center;
-    align-items: center;
-    margin-left: 7%;
-    margin-bottom: -12%;
     font-size: 30px;
-    margin-top: -10%;
+    margin-left: 45%;
+    padding-bottom: 2%;
 }
+
 .fale_conosco_container form{
     border: 1px solid black;
     border-radius: 10px;
 }
 
-#fale_conosco_container{
+#fale_conosco{
     display: flex;
     flex-direction:column;
     width: 100%;
     max-width: 400px;
     height: 650px;
     font-size: 20px;
-    margin-top: 200px;
     padding: 15px;
+    margin-left: 40%;
 }
 
-#fale_conosco_container input, #fale_conosco_container textarea, #fale_conosco_container button{
+#fale_conosco input, #fale_conosco textarea, #fale_conosco button{
     padding: 15px;
     border-radius: 15px;
     font-size: 90%;
 }
-#fale_conosco_container button {
+
+#fale_conosco button {
     margin-top: 10px;
     background-color: #007BFF;
     color: white;
     font-size: 20px;
 }
-#fale_conosco_container input, #fale_conosco_container textarea {
+
+#fale_conosco input, #fale_conosco textarea {
     margin: 5px;
 }
 
@@ -606,7 +608,7 @@ button{
     resize: none;
 }
 
-/* Página Sobre nós 8 */
+/* PÁGINA SOBRE NÓS */
 
 .sobre_container {
     width: 100%;

@@ -1,11 +1,13 @@
 
+// CARREGA E EXIBE OS ITENS DO CARRINHO DE COMPRA SALVOS NO LOCALSTORAGE
 
 let carrinhoCompras = JSON.parse(localStorage.getItem('carrinho'))
-
 console.log(carrinhoCompras)
 if(carrinhoCompras == null){
     carrinhoCompras = []
 }
+
+// ADICIONA HTML PARA CADA ITEM DO CARRINHO, INCLUINDO OPÇÕES PARA AJUSTAR A QUANTIDADE E REMOVER ITENS 
 
 let cartList = document.querySelector(".shop")
 carrinhoCompras.forEach(item => {
@@ -20,8 +22,9 @@ carrinhoCompras.forEach(item => {
 </div>`
 cartList.innerHTML += html
 
-
 });
+
+// FUNCIONALIDADE DE REMOVER PRODUTO DO CARRINHO
 
 let del = document.querySelectorAll("span.btn2")
 

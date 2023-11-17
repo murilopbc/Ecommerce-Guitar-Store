@@ -1,4 +1,5 @@
-// lista de produtos
+
+// LISTA DE PRODUTOS COM ID, NOME, DESCRIÇÃO, PREÇO, IMAGEM E CATEGORIA(aco ou nylon)
 
  export const catalogo = [{
     codigoProduto: 1,
@@ -12,7 +13,7 @@
 
 {
     codigoProduto: 2,
-    nomeProduto: "Violão Epiphone Jumbo Eletroacústico Aço J-200CE Studio",
+    nomeProduto: "Violão Epiphone Jumbo J-200CE",
     descricaoProduto:"O J-200CE é uma homenagem ao clássico Gibson SJ-200, um Super Jumbo com cutaway da linha Inspired by Gibson. Possui fundo e laterais em Select Maple, tampo sólido em Spruce, braço em Maple Slimtaper D, escala em pau ferro e marcação em coroa. Equipado com captador Fishman™ Sonicore e pré-amp Fishman™ Presys™ com afinador embutido.",
     precoProduto: 6921.00,
     imagemProduto: "./imagem/produtos/produto2.webp",
@@ -21,7 +22,7 @@
 
 {
     codigoProduto: 3,
-    nomeProduto: "Violão Martin Eletroacústico Aço 000-X2E Captador Fishman Mx",
+    nomeProduto: "Violão Martin 000-X2E",
     descricaoProduto:"A Martin recriou o 000X1AE como o 000-X2E, um violão de Auditório com topo de Sitka e laminado de alta pressão de mogno figurativo. Apresenta incrustações de madrepérola na escala, escala e ponte de HardWood, melhorando significativamente a ressonância. Equipado com eletrônica Fishman® MX e cordas Authentic Acoustic Lifespan® 2.0 da Martin's, este modelo inclui uma bag resistente à água, sendo ideal para viagens.",
     precoProduto: 7640.10,
     imagemProduto: "./imagem/produtos/produto3.webp",
@@ -30,7 +31,7 @@
 
 {
     codigoProduto: 4,
-    nomeProduto: "Violão de aço Crafter DE7N Folk",
+    nomeProduto: "Violão Crafter DE7N Folk",
     descricaoProduto:"O DE 7/N é um verdadeiro sucesso global da Crafter. Introduzido em 2001, o DE 7/N faz parte da coleção de violões de formato Dreadnought Cutaway da empresa.Com acabamento e construção excepcionais, o DE 7/N impressiona pela solidez e possui o tamanho ideal para quem busca maior projeção sonora.",
     precoProduto: 3234.74,
     imagemProduto: "./imagem/produtos/produto 4.png",
@@ -73,7 +74,7 @@
 },
 {
     codigoProduto: 9,
-    nomeProduto: "Violão Acústico CD-60S Folk All-Mahogany - Fender",
+    nomeProduto: "Violão Acústico CD-60S Folk- Fender",
     descricaoProduto:"O CD-60S All-Mahogany combina um tampo de mogno sólido com o popular modelo dreadnought da Fender, oferecendo um tom orgânico e alta qualidade acessível. Com um braço fácil de tocar e corpo em mogno, é ideal para jogadores que buscam excelente jogabilidade e som clássico em diversas situações, seja no sofá, na praia ou na cafeteria.",
     precoProduto: 1746.16,
     imagemProduto: "./imagem/produtos/produto9.webp",
