@@ -15,7 +15,8 @@ carrinhoCompras.forEach(item => {
     <img src="${item.imagemProduto}" alt="Violão Cort">
     <div class="content">
         <h3>${item.nomeProduto}</h3>
-        <h4>Preço: R$ ${item.precoProduto}</h4>
+        <h4>R$ ${item.precoProduto.toFixed(2).replace(".", ",")}</h4>
+        <h4>Subtotal: R$ ${item.precoProduto.toFixed(2).replace(".", ",")}</h4>
         <p class="unit">Quantidade: <input type= "number" min="1" value="${item.quantidade}"></p>
         <span class="btn2">Remover</span> 
     </div>
