@@ -62,6 +62,7 @@ export function carregaProduto(item){
 
 export function addItemCarrinho (item, carrinhoCompras) {
     let botaoComprar = document.querySelector('button')
+    console.log(botaoComprar)
   
     botaoComprar.addEventListener('click', () => {
         let quantidade = parseInt(document.querySelector('input#qtd').value)

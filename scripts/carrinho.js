@@ -30,7 +30,7 @@ cartList.innerHTML += html
 let del = document.querySelectorAll("span.btn2")
 
 del.forEach(botao => botao.addEventListener("click", (event) => {
-    let item = event.target.parentElement.parentElement.parentElement
+    let item = event.target.parentElement.parentElement
     console.log(item)
     cartList.removeChild(item)
     let index = carrinhoCompras.findIndex(produto => produto.codigoProduto == item.id)
