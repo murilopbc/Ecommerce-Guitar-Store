@@ -1,4 +1,6 @@
 
+import {valorTotalQuantidade } from "./funcoes.js";
+
 // CARREGA E EXIBE OS ITENS DO CARRINHO DE COMPRA SALVOS NO LOCALSTORAGE
 
 let carrinhoCompras = JSON.parse(localStorage.getItem('carrinho'))
@@ -16,13 +18,13 @@ carrinhoCompras.forEach(item => {
     <div class="content">
         <h3>${item.nomeProduto}</h3>
         <h4>R$ ${item.precoProduto.toFixed(2).replace(".", ",")}</h4>
-        <h4>Subtotal: R$ ${item.precoProduto.toFixed(2).replace(".", ",")}</h4>
-        <p class="unit">Quantidade: <input type= "number" min="1" value="${item.quantidade}"></p>
+        <p class="unit" >Quantidade: ${item.quantidade} </p>
         <span class="btn2">Remover</span> 
     </div>
-</div>`
-cartList.innerHTML += html
+    </div>`
+    cartList.innerHTML += html
 
+    valorTotalQuantidade(carrinhoCompras);
 });
 
 // FUNCIONALIDADE DE REMOVER PRODUTO DO CARRINHO
@@ -39,3 +41,12 @@ del.forEach(botao => botao.addEventListener("click", (event) => {
     localStorage.setItem('carrinho', JSON.stringify(carrinhoCompras))
     
 }))
+
+let finalizar = document.querySelector("fa fa-shopping-cart")
+finalizar.addEventListener('click', ()=> {
+
+    let endereco = {
+        nome: document.querySelector("input#nome").value,
+        
+    }
+})

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GuitarStore</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./scripts/carrinho.js" defer></script>
+    <script  type="module" src="./scripts/carrinho.js" defer></script>
 </head>
 
 <body>
@@ -80,12 +80,70 @@
         <!-- CALCULA VALOR TOTAL DOS ITENS E FINALIZA A COMPRA-->
 
                 <div class="right-bar">
-                    <p><span>Total:  </span> <span class="preco">R$ 3 006,10</span></p>
-                    <a href="cep.html"><i class="fa fa-shopping-cart"></i>Finalizar Compra</a>
+                    <p><span>Total:  </span> <span class="preco"></span></p>
+                    <a href="adm.html"><i class="fa fa-shopping-cart"></i>Finalizar Compra</a>
                 </div>
             </div>
         </div>
     </main>
+    
+     <!-- ENDEREÇO DE ENTREGA -->
+
+    <div class="endereco_container">
+        <h2>Endereço de Entrega</h2>
+        <form id="endereco_form">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" required>
+
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" required>
+
+            <label for="cep">Cep:</label>
+            <input type="text" name="cep" id="cep" required>
+
+            <label for="rua">Rua:</label>
+            <input type="text" name="rua" id="rua" required>
+
+            <label for="bairro">Bairro:</label>
+            <input type="text" name="bairro" id="bairro" required>
+
+            <label for="email">Cidade:</label>
+            <input type="text" name="email" id="email" required>
+
+            <select id="state" name="state">
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+                </select>
+        </form>
+    </div>
 
 </body>
 

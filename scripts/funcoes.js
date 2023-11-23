@@ -73,3 +73,19 @@ export function addItemCarrinho (item, carrinhoCompras) {
        
 })
 }
+
+// FUNÇÃO CALCULA VALOR TOTAL DOS PRODUTOS
+
+export function valorTotalQuantidade (carrinhoCompras){
+    let soma = 0
+    let quantidade = 0
+    carrinhoCompras.forEach(
+      item => {
+        soma += ((item.quantidade * item.precoProduto))
+        quantidade += item.quantidade
+      }  
+    )
+    document.querySelector(".preco").innerHTML = `R$ ${soma.toFixed(2).replace(".", ",")}`
+    console.log(soma, quantidade)
+    }
+    
