@@ -45,8 +45,33 @@ del.forEach(botao => botao.addEventListener("click", (event) => {
 let finalizar = document.querySelector("fa fa-shopping-cart")
 finalizar.addEventListener('click', ()=> {
 
+    let id = pedidos.length
+    if (pedidos == null || pedidos == 0){id = 1}
+
     let endereco = {
         nome: document.querySelector("input#nome").value,
-        
+        telefone: document.querySelector("input#telefone").value,
+        email: document.querySelector("input#email").value,
+        CEP: document.querySelector("input#CEP").value,
+        rua: document.querySelector("input#logradouro").value,
+        bairro: document.querySelector("input#bairro").value,
+        cidade: document.querySelector("input#cidade").value,
+        estado: document.querySelector("input#estado").value,
+       
     }
+
+        let pedido = {
+            id: id,
+            itens: listaCarrinhoDeCompras,
+            endereco: endereco
+        }
+    
+        pedidos.push(pedido)
+        localStorage.setItem("pedidos",JSON.stringify(pedidos))
+        localStorage.removeItem('carrinho')
+        localStorage.removeItem('IdProd')
+        alert("compra realizada com sucesso")
+        location.reload()
+        
+    
 })

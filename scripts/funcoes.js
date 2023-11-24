@@ -88,4 +88,6 @@ export function valorTotalQuantidade (carrinhoCompras){
     document.querySelector(".preco").innerHTML = `R$ ${soma.toFixed(2).replace(".", ",")}`
     console.log(soma, quantidade)
     }
+
+// FUNÇÃO PARA GERAR PEDIDO DE COMPRA
     
