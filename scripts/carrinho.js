@@ -9,6 +9,11 @@ if(carrinhoCompras == null){
     carrinhoCompras = []
 }
 
+let pedidos = JSON.parse(localStorage.getItem("pedidos"))
+if (pedidos == null ){
+    pedidos = []
+}
+
 // ADICIONA HTML PARA CADA ITEM DO CARRINHO, INCLUINDO OPÇÕES PARA AJUSTAR A QUANTIDADE E REMOVER ITENS 
 
 let cartList = document.querySelector(".shop")
@@ -42,8 +47,10 @@ del.forEach(botao => botao.addEventListener("click", (event) => {
     
 }))
 
-let finalizar = document.querySelector("fa fa-shopping-cart")
+let finalizar = document.querySelector("button")
+console.log(finalizar)
 finalizar.addEventListener('click', ()=> {
+
 
     let id = pedidos.length
     if (pedidos == null || pedidos == 0){id = 1}
@@ -52,17 +59,17 @@ finalizar.addEventListener('click', ()=> {
         nome: document.querySelector("input#nome").value,
         telefone: document.querySelector("input#telefone").value,
         email: document.querySelector("input#email").value,
-        CEP: document.querySelector("input#CEP").value,
-        rua: document.querySelector("input#logradouro").value,
+        CEP: document.querySelector("input#cep").value,
+        rua: document.querySelector("input#rua").value,
         bairro: document.querySelector("input#bairro").value,
         cidade: document.querySelector("input#cidade").value,
-        estado: document.querySelector("input#estado").value,
+        estado: document.querySelector("select#state").value,
        
     }
 
         let pedido = {
             id: id,
-            itens: listaCarrinhoDeCompras,
+            itens: carrinhoCompras,
             endereco: endereco
         }
     
@@ -70,8 +77,7 @@ finalizar.addEventListener('click', ()=> {
         localStorage.setItem("pedidos",JSON.stringify(pedidos))
         localStorage.removeItem('carrinho')
         localStorage.removeItem('IdProd')
-        alert("compra realizada com sucesso")
+        alert("Compra realizada com sucesso!")
         location.reload()
-        
-    
+   
 })

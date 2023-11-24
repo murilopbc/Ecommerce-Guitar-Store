@@ -472,7 +472,7 @@ button{
     font-size: 20px;
 }
 
-.right-bar a{
+.right-bar button{
     background-color: rgb(23, 161, 23);
     border-radius: 5px;
     color: white;

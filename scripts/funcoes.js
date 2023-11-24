@@ -68,6 +68,7 @@ export function addItemCarrinho (item, carrinhoCompras) {
         let quantidade = parseInt(document.querySelector('input#qtd').value)
         let newItem = {...item,quantidade}
         carrinhoCompras.push(newItem)
+        alert("Item adicionado com sucesso!")
         console.log(carrinhoCompras)
         localStorage.setItem('carrinho', JSON.stringify(carrinhoCompras))
        
