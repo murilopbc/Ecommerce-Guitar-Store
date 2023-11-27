@@ -476,12 +476,11 @@ button{
     background-color: rgb(23, 161, 23);
     border-radius: 5px;
     color: white;
-    text-decoration: none;
-    display: block;
     text-align: center;
     height: 40px;
-    line-height: 40px;
+    line-height: 20px;
     font-weight: 900;
+    padding: 5%;
 }
 
 .right-bar a  :hover{

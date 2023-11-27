@@ -32,7 +32,7 @@ carrinhoCompras.forEach(item => {
     valorTotalQuantidade(carrinhoCompras);
 });
 
-// FUNCIONALIDADE DE REMOVER PRODUTO DO CARRINHO
+// REMOVER PRODUTO DO CARRINHO
 
 let del = document.querySelectorAll("span.btn2")
 
@@ -46,6 +46,8 @@ del.forEach(botao => botao.addEventListener("click", (event) => {
     localStorage.setItem('carrinho', JSON.stringify(carrinhoCompras))
     
 }))
+
+// FINALIZAR E GERAR PEDIDO
 
 let finalizar = document.querySelector("button")
 console.log(finalizar)
