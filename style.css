@@ -522,7 +522,7 @@ button{
     }    
 }
 
-/* PÁGINA ENDEREÇO DE ENTREGA */
+/* ENDEREÇO DE ENTREGA */
 
 .endereco_container {
     height: 800px;
@@ -530,7 +530,7 @@ button{
     flex-direction: column;
     justify-content:center; 
     padding-left: 600px; 
-    margin-top: 8%;  
+    margin-top: 2%;  
 } 
 
 .endereco_container h2{
