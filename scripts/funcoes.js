@@ -90,5 +90,4 @@ export function valorTotalQuantidade (carrinhoCompras){
     console.log(soma, quantidade)
     }
 
-// FUNÇÃO PARA GERAR PEDIDO DE COMPRA
     

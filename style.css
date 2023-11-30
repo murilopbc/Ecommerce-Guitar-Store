@@ -90,7 +90,7 @@ main{
     object-fit: contain;
 }
 
-/* PRODUTOS */
+/* PRODUTOS HOME E PÁGINA DE PRODUTOS */
 
 .produtos_container {
     padding: 0 72px;
@@ -103,12 +103,12 @@ main{
 }
 
 .produto_grid {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr ;
-align-items: center;
-justify-content: space-between;
-gap: 40px;
-padding: 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 64px;
 }
 
 .produtos{
@@ -138,7 +138,7 @@ padding: 64px;
     object-fit: contain;
 }
 
-/* PROPAGANDA */
+/* PROPAGANDA HOME */
 
 #propaganda_container{
     padding-bottom: 30px;
@@ -165,7 +165,7 @@ padding: 64px;
     font-size: 35px;
 }
 
-/* RODAPÉ */
+/* FOOTER */
 
 .footer_container{
     align-items: center;
@@ -193,7 +193,7 @@ padding: 64px;
     padding-right: 0.5%;
 }
 
-/* PÁGINA PRODUTOS */
+/* PÁGINA INDIVIDUAL DE PRODUTOS */
 
 .img_produto_container {
     padding: 60px 72px;
@@ -560,7 +560,6 @@ button{
 #state {
     margin-top: 20px;
 }
-
 
 /* PÁGINA FALE CONOSCO */
 
