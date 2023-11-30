@@ -49,7 +49,7 @@ del.forEach(botao => botao.addEventListener("click", (event) => {
 
 // FINALIZAR E GERAR PEDIDO
 
-let finalizar = document.querySelector("button.enviar")
+let finalizar = document.querySelector("button")
 console.log(finalizar)
 finalizar.addEventListener('click', ()=> {
 
