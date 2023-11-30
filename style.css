@@ -522,14 +522,15 @@ button{
     }    
 }
 
-/* ENDEREÇO DE ENTREGA */
+/* PÁGINA ENDEREÇO DE ENTREGA */
 
 .endereco_container {
     height: 800px;
     display:flex;
     flex-direction: column;
     justify-content:center; 
-    padding-left: 450px;   
+    padding-left: 600px; 
+    margin-top: 8%;  
 } 
 
 .endereco_container h2{
@@ -618,4 +619,14 @@ button{
     font-size: 20px;
     height: 150px;
     padding-top: 50px;
+}
+
+button.enviar {
+    margin-top: 10px;
+    border-radius: 15px;
+    width: 60%;
+    height: 35px;
+    margin-left: 20%;
+    background-color:black;
+    color: white;
 }

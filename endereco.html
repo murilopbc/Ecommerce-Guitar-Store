@@ -59,34 +59,65 @@
             </div>
         </div>
     </header>
+    <!-- ENDEREÇO DE ENTREGA -->
 
-    <!-- CARRINHO DE COMPRAS -->
+    <div class="endereco_container">
+        <h2>Endereço de Entrega</h2>
+        <form id="endereco_form">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
 
-    <main>
-        <div class="wraper">
-            <h1>Meu Carrinho</h1>
-            <div class="project">
-                <div class="shop">
-                    <!-- <div class="box">
-                        <img src="./imagem/produtos/produto1.webp" alt="Violão Takamine">
-                        <div class="content">
-                            <h3>Violão Takamine GD 11</h3>
-                            <h4>R$ 2 410,00</h4>
-                            <input type="number" min="1" value="1">
-                            <span class="btn2">Remover</span>
-                        </div>
-                    </div> -->
-                </div>
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" required>
 
-                <!-- CALCULA VALOR TOTAL DOS ITENS E FINALIZA A COMPRA-->
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" required>
 
-                <div class="right-bar">
-                    <p><span>Total: </span> <span class="preco"></span></p>
-                    <a href="endereco.html"><button>Finalizar Compra</button></a>
-                </div>
-            </div>
-        </div>
-    </main>
+            <label for="cep">Cep:</label>
+            <input type="text" name="cep" id="cep" required>
+
+            <label for="rua">Rua:</label>
+            <input type="text" name="rua" id="rua" required>
+
+            <label for="bairro">Bairro:</label>
+            <input type="text" name="bairro" id="bairro" required>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="cidade" id="cidade" required>
+
+            <select id="state" name="state">
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+            </select>
+            <button class="enviar" type="submit">Enviar</button>
+        </form>
+    </div>
+
 </body>
 
 </html>
