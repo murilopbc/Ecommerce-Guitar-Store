@@ -1,19 +1,22 @@
 let data = JSON.parse(localStorage.getItem("pedidos"));
-let resultadoDiv = document.getElementById("resultado");
-console.log(resultadoDiv)
+
+const    resultadoDiv = document.getElementById("resultado");
+const tbodyTable = document.querySelector('.tbodyTable');
 
 data.forEach(pedido => {
-    resultadoDiv.innerHTML += `<h2>Itens do Pedido:</h2>`;
-    resultadoDiv.innerHTML += `<h3>Cliente ${pedido.endereco.nome}</h3>`;
-    resultadoDiv.innerHTML += '<ul>';
+    // CONCATENA OS NOMES DOS ITENS EM UMA STRING SEPARADA POR VÍRGULA
+    const nomesItens = pedido.itens.map(item => item.nomeProduto).join(', ');
 
-    pedido.itens.forEach(item => {
-        resultadoDiv.innerHTML += '<hr>';
-        resultadoDiv.innerHTML += `<li>Título: ${item.nomeProduto}</li>`;
-        resultadoDiv.innerHTML += `<li>Quantidade: ${item.quantidade}</li>`;
-        resultadoDiv.innerHTML += `<li>Preço: $${item.precoProduto}</li>`;
-        resultadoDiv.innerHTML += '<hr>';
-    });
+    // CRIA UM ELEMENTO NA TABELA PARA CADA PEDIDO
+    let pedidoRow = document.createElement('tr');
+    pedidoRow.innerHTML = `<th scope="row" style="text-align:center;">${pedido.id}</th>
+                           <td style="text-align:center;">${nomesItens}</td>
+                           <td style="text-align:center;">R$${valorTotalQuantidade(pedido.itens).toFixed(2).replace('.', ',')}</td>`;
 
-    resultadoDiv.innerHTML += '</ul>';
+    // ADICIONA O ELEMENTO DO PEDIDO A TABELA
+    tbodyTable.appendChild(pedidoRow);
 });
+
+function valorTotalQuantidade(itens) {
+    return itens.reduce((total, item) => total + item.precoProduto, 0);
+}

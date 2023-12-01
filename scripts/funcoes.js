@@ -90,4 +90,37 @@ export function valorTotalQuantidade (carrinhoCompras){
     console.log(soma, quantidade)
     }
 
-    
+// FUNÇÃO DE GERAR O PEDIDO
+
+export function gerarPedido(carrinho_compras) {
+    let finalizar = document.querySelector("button");
+
+    finalizar.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // Carrega os pedidos existentes do localStorage
+        let pedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
+
+        // Calcula o próximo código de pedido
+        let codPedido = pedidos.length + 1;
+
+        // Cria o novo pedido
+        let pedido = {
+            itens: carrinho_compras,
+            id: codPedido
+        };
+
+        // Adiciona o novo pedido à lista existente
+        pedidos.push(pedido);
+
+        // Atualiza o localStorage com a lista completa de pedidos
+        localStorage.setItem('pedidos', JSON.stringify(pedidos));
+
+        alert("Pedido finalizado");
+
+        localStorage.removeItem("carrinho");
+        localStorage.removeItem("prodID");
+
+        location.reload();
+    });
+}

@@ -1,9 +1,12 @@
 
-import {valorTotalQuantidade } from "./funcoes.js";
+import {gerarPedido, valorTotalQuantidade } from "./funcoes.js";
+
 
 // CARREGA E EXIBE OS ITENS DO CARRINHO DE COMPRA SALVOS NO LOCALSTORAGE
 
 let carrinhoCompras = JSON.parse(localStorage.getItem('carrinho'))
+gerarPedido(carrinhoCompras);
+
 console.log(carrinhoCompras)
 if(carrinhoCompras == null){
     carrinhoCompras = []
@@ -46,40 +49,3 @@ del.forEach(botao => botao.addEventListener("click", (event) => {
     localStorage.setItem('carrinho', JSON.stringify(carrinhoCompras))
     
 }))
-
-// FINALIZAR E GERAR PEDIDO
-
-let finalizar = document.querySelector("button")
-console.log(finalizar)
-finalizar.addEventListener('click', ()=> {
-
-
-    let id = pedidos.length
-    if (pedidos == null || pedidos == 0){id = 1}
-
-    let endereco = {
-        nome: document.querySelector("input#nome").value,
-        telefone: document.querySelector("input#telefone").value,
-        email: document.querySelector("input#email").value,
-        CEP: document.querySelector("input#cep").value,
-        rua: document.querySelector("input#rua").value,
-        bairro: document.querySelector("input#bairro").value,
-        cidade: document.querySelector("input#cidade").value,
-        estado: document.querySelector("select#state").value,
-       
-    }
-
-        let pedido = {
-            id: id,
-            itens: carrinhoCompras,
-            endereco: endereco
-        }
-    
-        pedidos.push(pedido)
-        localStorage.setItem("pedidos",JSON.stringify(pedidos))
-        localStorage.removeItem('carrinho')
-        localStorage.removeItem('IdProd')
-        alert("Compra realizada com sucesso!")
-        location.reload()
-   
-})
