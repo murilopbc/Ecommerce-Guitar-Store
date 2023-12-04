@@ -620,13 +620,3 @@ button{
     height: 150px;
     padding-top: 50px;
 }
-
-button.enviar {
-    margin-top: 10px;
-    border-radius: 15px;
-    width: 60%;
-    height: 35px;
-    margin-left: 20%;
-    background-color:black;
-    color: white;
-}
